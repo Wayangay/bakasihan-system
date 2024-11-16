@@ -2,100 +2,6 @@
   <q-layout view="hHr lpR fFf" class="bg-grey-11">
     <q-header elevated class="bg-accent text-white">
       <q-toolbar>
-        <!-- <q-btn-dropdown
-          flat
-          dense
-          rounded
-          dropdown-icon="mdi-chevron-double-up"
-          v-if="
-            orderStore.myOrder &&
-            typeof orderStore.myOrder.order_process === 'number' &&
-            orderStore.myOrder.order_process === 1
-          "
-        >
-          <q-list style="width: 250px" class="q-py-md">
-            <q-item clickable v-close-popup :to="{ name: 'index' }">
-              <q-item-section avatar>
-                <q-avatar icon="mdi-home" color="accent" text-color="grey-11" />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>Home</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup :to="{ name: 'customers' }">
-              <q-item-section avatar>
-                <q-avatar
-                  icon="mdi-account-group"
-                  color="accent"
-                  text-color="grey-11"
-                />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>Customers</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup :to="{ name: 'tables' }">
-              <q-item-section avatar>
-                <q-avatar
-                  icon="mdi-table-furniture"
-                  color="accent"
-                  text-color="grey-11"
-                />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>Tables</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup :to="{ name: 'orders' }">
-              <q-item-section avatar>
-                <q-avatar
-                  icon="mdi-order-bool-ascending"
-                  color="accent"
-                  text-color="grey-11"
-                />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>Orders</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup :to="{ name: 'sales' }">
-              <q-item-section avatar>
-                <q-avatar
-                  icon="mdi-point-of-sale"
-                  color="accent"
-                  text-color="grey-11"
-                />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>Sales</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup @click="onItemClick">
-              <q-item-section avatar>
-                <q-avatar
-                  icon="mdi-logout"
-                  color="accent"
-                  text-color="grey-11"
-                />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>Logout</q-item-label>
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown> -->
-
         <q-toolbar-title>
           <q-avatar><img src="../assets/logo.png" alt="" /></q-avatar> Entoy's
           Bakasihan
@@ -275,14 +181,7 @@
           >
         </div>
         <div class="row items-center q-gutter-x-md q-pb-sm">
-          <q-btn
-            dense
-            rounded
-            color="grey-8"
-            label="hold"
-            class="col"
-            icon="stop"
-          />
+        
           <q-btn
             dense
             rounded
