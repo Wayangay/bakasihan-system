@@ -148,7 +148,13 @@ export const insertCustomerTables = async(req:Request,res:Response)=>{
 export const insertProductCategory = async(req:Request,res:Response)=>{
     try {
         const {category_name} = await req.body;
-        console.log(req.body)
+        const checkQuery = "SELECT category_name FROM product_categories_tbl WHERE category_name = ?"
+
+        const check = await executeQuery(checkQuery,[category_name]) as Array<any>
+
+        if(check.length > 0){
+            return res.status(409).send({message:"category Already exist!!!!"})
+        }
         const insertCategoryQuery = 'INSERT INTO product_categories_tbl(category_name) VALUES(?)'
         const result = await executeQuery(insertCategoryQuery,[category_name]);
         if(!result){
@@ -165,9 +171,9 @@ export const insertItemCategory = async(req:Request,res:Response)=>{
         const {category_name} = await req.body;
         const checkQuery = "SELECT category_name FROM items_category_tbl WHERE category_name = ?"
 
-        const check = await executeQuery(checkQuery,[category_name])
+        const check = await executeQuery(checkQuery,[category_name]) as Array<any>
 
-        if(check){
+        if(check.length > 0){
             return res.status(409).send({message:"category Already exist!!!!"})
         }
         const insertCategoryQuery = 'INSERT INTO items_category_tbl(category_name) VALUES(?)'
