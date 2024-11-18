@@ -181,7 +181,6 @@
           >
         </div>
         <div class="row items-center q-gutter-x-md q-pb-sm">
-        
           <q-btn
             dense
             rounded
@@ -225,9 +224,7 @@ const customers_name = ref<string>('');
 const orderStore = useOrderStore();
 let timer: NodeJS.Timeout | undefined;
 const productStore = useProductStore();
-const onItemClick = () => {
-  console.log('Clicked');
-};
+
 watch(
   () => router.currentRoute.value.name,
   (newVal, oldVal) => {
