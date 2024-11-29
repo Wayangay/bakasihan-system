@@ -38,7 +38,9 @@
             orderStore.myOrder.order_process === 1 &&
             drawer === false
           "
-        />
+        >
+        <q-badge color="red" floating>{{ orderStore.myOrderCount }}</q-badge>
+      </q-btn>
       </q-toolbar>
     </q-header>
 
